@@ -2,6 +2,23 @@
 # constructor
 
 # YOUR CODE HERE
+class LatLon:
+    lat = 0.0
+    lon = 0.0
+
+    def __init__(self, lt, lg):
+        self.lat = lt
+        self.lon = lg
+
+    def display(self):
+        print("latitude is = " + str(self.lat))
+        print('Longitude is = ' + str(self.lon))
+
+obj = LatLon(44, 122)
+
+obj.display()
+    
+        
 
 # Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon` to the
 # constructor. It should inherit from LatLon. Look up the `super` method.
@@ -19,11 +36,11 @@
 
 # Without changing the following line, how can you make it print into something
 # more human-readable? Hint: Look up the `object.__str__` method
-print(waypoint)
+#print(waypoint)
 
 # Make a new geocache "Newberry Views", diff 1.5, size 2, 44.052137, -121.41556
 
 # YOUR CODE HERE
 
 # Print it--also make this print more nicely
-print(geocache)
+#print(geocache)
