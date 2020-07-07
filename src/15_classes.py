@@ -24,7 +24,20 @@ obj.display()
 # constructor. It should inherit from LatLon. Look up the `super` method.
 
 # YOUR CODE HERE
+class Waypoints(LatLon):
+    def __init__(self, name, lt, lg):
+        self.name = name
+        super().__init__(lt, lg)
 
+    def display_waypoint(self):
+        print('Name is = ' + str(self.name))
+        print("latitude is = " + str(self.lat))
+        print('Longitude is = ' + str(self.lon))
+       
+
+obj = Waypoints("Waypoint", 42, 100)
+    
+obj.display_waypoint()
 # Make a class Geocache that can be passed parameters `name`, `difficulty`,
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
