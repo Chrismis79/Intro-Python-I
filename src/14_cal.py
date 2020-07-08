@@ -30,3 +30,42 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+#get today's info for when nothing is inputed
+#today = datetime.today()
+#year = datetime.now().year
+#month = datetime.now().month
+#print("The month is: ", str(month))
+
+def calendarMaker():
+  today = datetime.today()
+  year = today.year
+  month = today.month
+  print("The month is: ", str(month))
+
+#Inputs
+month_input = input("Please enter the month: ex: 4: ")
+year_input = input("Please enter a year: ex 1999: ")
+print(month_input, year_input)
+
+#Conditionals to print calendar
+if len(month_input) > 0 and len(month_input) <= 2 and month_input.isdigit():
+  month = int(month_input)
+
+if len(year_input) > 0 and len(year_input) <=4 and year_input.isdigit():
+  year = int(year_input)
+
+if len(month_input) == 0 and len(year_input) == 0:
+  year = datetime.today().year
+  month = datetime.today().month
+
+if len(month_input) > 0 and len(year_input) == 0:
+  month = int(month_input)
+  year = datetime.today().year
+
+else:
+  print("please enter 2 digit month and 4 digit year")
+
+print(calendar.month(year, month))
+
+calendarMaker()
